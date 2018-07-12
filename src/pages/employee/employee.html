@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{employeeName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <ion-list>
+    <button ion-button (click)="addNewEmployee()" full round>New</button>
+
+    <ion-item *ngFor="let item of employeeList" full>
+      {{item.name}} {{item.surname}} {{item.age}}
+    </ion-item>
+  </ion-list>
+</ion-content>
