@@ -12,12 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import {EmployeePage} from "../pages/employee/employee";
 import {ProductsAndServicesPage} from "../pages/products-and-services/products-and-services";
 import {EmployeeListUpdateComponent} from "../components/employee-list-update/employee-list-update";
-<<<<<<< HEAD
-import { ProductUpdateComponent } from '../components/product-update/product-update';
-import { ServiceUpdateComponent } from '../components/service-update/service-update';
-=======
 import { AppointmentPage } from '../pages/appointment/appointment';
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
 
 @NgModule({
   declarations: [
@@ -27,13 +22,7 @@ import { AppointmentPage } from '../pages/appointment/appointment';
     LoginPage,
     EmployeePage,
     EmployeeListUpdateComponent,
-<<<<<<< HEAD
-    ProductsAndServicesPage,
-    ProductUpdateComponent,
-    ServiceUpdateComponent
-=======
     AppointmentPage
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
   ],
   imports: [
     BrowserModule,
@@ -47,13 +36,7 @@ import { AppointmentPage } from '../pages/appointment/appointment';
     LoginPage,
     EmployeePage,
     EmployeeListUpdateComponent,
-<<<<<<< HEAD
-    ProductsAndServicesPage,
-    ProductUpdateComponent,
-    ServiceUpdateComponent
-=======
     AppointmentPage
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
 
   ],
   providers: [

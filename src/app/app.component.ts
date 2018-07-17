@@ -7,11 +7,7 @@ import {HomePage} from '../pages/home/home';
 import {ListPage} from '../pages/list/list';
 import {LoginPage} from '../pages/login/login';
 import {EmployeePage} from "../pages/employee/employee";
-<<<<<<< HEAD
-import {ProductsAndServicesPage} from "../pages/products-and-services/products-and-services";
-=======
 import {AppointmentPage} from "../pages/appointment/appointment";
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
 
 @Component({
   templateUrl: 'app.html'
@@ -31,11 +27,7 @@ export class MyApp {
       {title: 'Home', component: HomePage},
       {title: 'List', component: ListPage},
       {title: 'Employees', component: EmployeePage},
-<<<<<<< HEAD
-      {title: 'Products and Services', component: ProductsAndServicesPage}
-=======
       {title: 'Appointments', component: AppointmentPage}
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
     ];
 
   }
