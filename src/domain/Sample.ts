@@ -1,16 +1,10 @@
-<<<<<<< HEAD
+
 import {Employee} from "./Employee";
-<<<<<<< HEAD
 import {Product} from "./Product";
 import {Service} from "./Service";
-=======
 import { Appointment } from "./Appointment";
-import { App } from "ionic-angular/umd";
-=======
-import { Employee } from "./Employee";
->>>>>>> 1bdfd0c4bff722cafd26a9cdd58fa932905aabd3
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
-/**
+
+/*
  * @author mali.sahin
  * @since  12-Jul-18.
  */
@@ -47,7 +41,7 @@ export class Sample {
     return this.employeeList;
 
   }
-<<<<<<< HEAD
+
   getProductList(): Product[]{
     let prod1 = new Product();
     prod1.id = '1';
@@ -98,7 +92,7 @@ export class Sample {
     this.serviceList.push(serv3);
 
     return this.serviceList;
-=======
+  }
 
   appointmentList: Appointment[] = [];
 
@@ -126,6 +120,5 @@ export class Sample {
 
     return this.appointmentList;
 
->>>>>>> 6032d4a2ff89ce4bc95a009d7b7dc3fff42d58c6
   }
 }
