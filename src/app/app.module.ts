@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import {EmployeePage} from "../pages/employee/employee";
 import {EmployeeListUpdateComponent} from "../components/employee-list-update/employee-list-update";
+import { AppointmentPage } from '../pages/appointment/appointment';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {EmployeeListUpdateComponent} from "../components/employee-list-update/em
     ListPage,
     LoginPage,
     EmployeePage,
-    EmployeeListUpdateComponent
+    EmployeeListUpdateComponent,
+    AppointmentPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import {EmployeeListUpdateComponent} from "../components/employee-list-update/em
     ListPage,
     LoginPage,
     EmployeePage,
-    EmployeeListUpdateComponent
+    EmployeeListUpdateComponent,
+    AppointmentPage
 
   ],
   providers: [

@@ -1,4 +1,6 @@
 import {Employee} from "./Employee";
+import { Appointment } from "./Appointment";
+import { App } from "ionic-angular/umd";
 /**
  * @author mali.sahin
  * @since  12-Jul-18.
@@ -29,6 +31,34 @@ export class Sample {
     this.employeeList.push(em3);
 
     return this.employeeList;
+
+  }
+
+  appointmentList: Appointment[] = [];
+
+  getAppointmentList(): Appointment[] {
+    let ap1 = new Appointment();
+    ap1.customerName = "Müşteri1";
+    ap1.customerPhoneNumber = 5467891234;
+    ap1.appointmentDate = "16.7.2018-12:00";
+    ap1.employee = "Ali";
+    this.appointmentList.push(ap1);
+
+    let ap2 = new Appointment();
+    ap2.customerName = "Müşteri1";
+    ap2.customerPhoneNumber = 5459999999;
+    ap2.appointmentDate = "16.7.2018-14:00";
+    ap2.employee = "Nur";
+    this.appointmentList.push(ap2);
+
+    let ap3 = new Appointment();
+    ap3.customerName = "Müşteri2";
+    ap3.customerPhoneNumber = 5440000000;
+    ap3.appointmentDate = "16.7.2018-16:00";
+    ap3.employee = "Elif";
+    this.appointmentList.push(ap3);
+
+    return this.appointmentList;
 
   }
 }
