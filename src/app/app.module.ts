@@ -10,7 +10,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import {EmployeePage} from "../pages/employee/employee";
+import {ProductsAndServicesPage} from "../pages/products-and-services/products-and-services";
 import {EmployeeListUpdateComponent} from "../components/employee-list-update/employee-list-update";
+import { ProductUpdateComponent } from '../components/product-update/product-update';
+import { ServiceUpdateComponent } from '../components/service-update/service-update';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {EmployeeListUpdateComponent} from "../components/employee-list-update/em
     ListPage,
     LoginPage,
     EmployeePage,
-    EmployeeListUpdateComponent
+    EmployeeListUpdateComponent,
+    ProductsAndServicesPage,
+    ProductUpdateComponent,
+    ServiceUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,10 @@ import {EmployeeListUpdateComponent} from "../components/employee-list-update/em
     ListPage,
     LoginPage,
     EmployeePage,
-    EmployeeListUpdateComponent
+    EmployeeListUpdateComponent,
+    ProductsAndServicesPage,
+    ProductUpdateComponent,
+    ServiceUpdateComponent
 
   ],
   providers: [

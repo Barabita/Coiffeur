@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
-import {Employee} from "../../domain/Employee";
-import {Sample} from "../../domain/Sample";
-import {EmployeeListUpdateComponent} from "../../components/employee-list-update/employee-list-update";
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { Employee } from "../../domain/Employee";
+import { Sample } from "../../domain/Sample";
+import { EmployeeListUpdateComponent } from "../../components/employee-list-update/employee-list-update";
 
 
 @IonicPage()
@@ -16,11 +16,14 @@ export class EmployeePage {
 
   employeeName = "EMPLOYEE2";
 
+  editEmployee: Employee;
+  editFlag: boolean = false;
+
   samples: Sample = new Sample();
 
   constructor(public navCtrl: NavController,
-              private modalCtrl: ModalController,
-              public navParams: NavParams) {
+    private modalCtrl: ModalController,
+    public navParams: NavParams) {
 
     this.getEmployeeList();
   }
@@ -35,14 +38,26 @@ export class EmployeePage {
 
   addNewEmployee() {
 
-    let modal = this.modalCtrl.create(EmployeeListUpdateComponent, {data: 'Ayşe'});
+    let modal = this.modalCtrl.create(EmployeeListUpdateComponent, { employee: this.editEmployee });
     modal.onDidDismiss((res) => {
       console.table(res);
-      debugger;
-      this.employeeList.push(res.employee);
+      if (!this.editFlag)
+        this.employeeList.push(res.employee);
     });
 
     modal.present();
   }
 
+  edit(item: any) {
+    debugger;
+    console.table(item);
+    this.editEmployee = item;
+    this.editFlag = true;
+    this.addNewEmployee();
+  }
+
+
+  delete(item: any) {
+    debugger;
+  }
 }
