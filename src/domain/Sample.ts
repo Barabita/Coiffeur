@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import {Employee} from "./Employee";
 import { Appointment } from "./Appointment";
 import { App } from "ionic-angular/umd";
+=======
+import { Employee } from "./Employee";
+>>>>>>> 1bdfd0c4bff722cafd26a9cdd58fa932905aabd3
 /**
  * @author mali.sahin
  * @since  12-Jul-18.
@@ -16,18 +20,21 @@ export class Sample {
     em1.name = "Ali";
     em1.age = 26;
     em1.surname = "Şahin";
+    em1.id = "1";
     this.employeeList.push(em1);
 
     let em2 = new Employee();
     em2.name = "Elif";
     em2.surname = "Şahin";
     em2.age = 20;
+    em2.id = "2";
     this.employeeList.push(em2);
 
     let em3 = new Employee();
     em3.name = "Nur";
     em3.surname = "Musevit";
     em3.age = 21;
+    em3.id = "3";
     this.employeeList.push(em3);
 
     return this.employeeList;

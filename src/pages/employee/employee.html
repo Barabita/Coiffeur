@@ -13,8 +13,20 @@
   <ion-list>
     <button ion-button (click)="addNewEmployee()" full round>New</button>
 
-    <ion-item *ngFor="let item of employeeList" full>
-      {{item.name}} {{item.surname}} {{item.age}}
-    </ion-item>
+    <ion-row *ngFor="let item of employeeList">
+      <ion-col>
+        {{item.id}} {{item.name}} {{item.surname}} {{item.age}}
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="edit(item)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="delete(item)">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-list>
 </ion-content>
