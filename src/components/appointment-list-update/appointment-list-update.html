@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row class="modal-title">
+      <ion-col col-11 col-md-11>
+        <ion-title>Appointment add/update</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="content">
+
+  <button ion-button (click)="addNewCustomer()" full round>New Customer</button>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Customer</ion-label>
+        <ion-select [(ngModel)]="appointment.customer" (click)="getCustomerList()">
+    
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-col col-4 col-md-4>
+      <ion-label color="primary">Appointment Date</ion-label>
+    </ion-col>
+    <ion-col col-8 col-md-8>
+      <ion-input type="text" [(ngModel)]="appointment.appointmentDate"></ion-input>
+    </ion-col>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Employee</ion-label>
+        <ion-select [(ngModel)]="appointment.employee" (click)="getEmployeeList()">
+      
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-col col-6>
+      <button ion-button icon-start full round (click)="save()">
+        <ion-icon name="md-help"></ion-icon>
+        Save
+      </button>
+    </ion-col>
+
+    <ion-col col-6>
+      <button ion-button icon-start full round (click)="quit()">
+        <ion-icon name="md-help"></ion-icon>
+        Cancel
+      </button>
+    </ion-col>
+
+
+  </ion-row>
+
+
+</ion-content>
+<ion-footer>
+</ion-footer>

@@ -12,6 +12,8 @@ import { LoginPage } from '../pages/login/login';
 import {EmployeePage} from "../pages/employee/employee";
 import {EmployeeListUpdateComponent} from "../components/employee-list-update/employee-list-update";
 import { AppointmentPage } from '../pages/appointment/appointment';
+import { AppointmentListUpdateComponent } from '../components/appointment-list-update/appointment-list-update';
+import { CustomerListUpdateComponent } from '../components/customer-list-update/customer-list-update';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AppointmentPage } from '../pages/appointment/appointment';
     LoginPage,
     EmployeePage,
     EmployeeListUpdateComponent,
-    AppointmentPage
+    AppointmentPage,
+    AppointmentListUpdateComponent,
+    CustomerListUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { AppointmentPage } from '../pages/appointment/appointment';
     LoginPage,
     EmployeePage,
     EmployeeListUpdateComponent,
-    AppointmentPage
+    AppointmentPage,
+    AppointmentListUpdateComponent,
+    CustomerListUpdateComponent
 
   ],
   providers: [

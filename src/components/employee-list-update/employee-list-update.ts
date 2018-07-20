@@ -20,7 +20,6 @@ export class EmployeeListUpdateComponent {
   constructor(private viewCtrl: ViewController, private params: NavParams, private navCtrl: NavController) {
     console.log('Hello EmployeeListUpdateComponent Component');
 
-    debugger;
     this.employee = this.params.data.employee;
   }
 

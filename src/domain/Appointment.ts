@@ -1,4 +1,5 @@
 import { Employee } from "./Employee";
+import { Customer } from "./Customer";
 
 /**
  * @author Nurefşan Müsevitoğlu
@@ -8,8 +9,7 @@ import { Employee } from "./Employee";
 
 export class Appointment {
 
-    customerName: string;
-    customerPhoneNumber: number;
+    customer: Customer;
     appointmentDate: string;
-    employee: string;
+    employee: Employee;
   }

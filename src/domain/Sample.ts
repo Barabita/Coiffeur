@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import {Employee} from "./Employee";
 import { Appointment } from "./Appointment";
 import { App } from "ionic-angular/umd";
-=======
-import { Employee } from "./Employee";
->>>>>>> 1bdfd0c4bff722cafd26a9cdd58fa932905aabd3
+import { Customer } from "./Customer";
 /**
  * @author mali.sahin
  * @since  12-Jul-18.
@@ -14,8 +11,13 @@ import { Employee } from "./Employee";
 export class Sample {
 
   employeeList: Employee[] = [];
+  appointmentList: Appointment[] = [];
+  customerList: Customer[] = [];
 
-  getEmployeeList(): Employee[] {
+  arrangeLists() {
+
+    //------------------------------çalışanlar------------------------------
+
     let em1 = new Employee();
     em1.name = "Ali";
     em1.age = 26;
@@ -37,35 +39,62 @@ export class Sample {
     em3.id = "3";
     this.employeeList.push(em3);
 
-    return this.employeeList;
+    //---------------müşteriler-------------------------
 
-  }
+    let cs1 = new Customer();
+    cs1.id = 4;
+    cs1.name = "aaaa";
+    cs1.surname = "aa";
+    cs1.phoneNumber = 1111;
+    this.customerList.push(cs1);
 
-  appointmentList: Appointment[] = [];
+    let cs2 = new Customer();
+    cs2.id = 5;
+    cs2.name = "bbbb";
+    cs2.surname = "bb";
+    cs2.phoneNumber = 2222;
+    this.customerList.push(cs2);
 
-  getAppointmentList(): Appointment[] {
+    let cs3 = new Customer();
+    cs3.id = 6;
+    cs3.name = "cccc";
+    cs3.surname = "cc";
+    cs3.phoneNumber = 3333;
+    this.customerList.push(cs3);
+    
+    //--------------------------randevular------------------------------- 
+
     let ap1 = new Appointment();
-    ap1.customerName = "Müşteri1";
-    ap1.customerPhoneNumber = 5467891234;
+    ap1.customer = cs1;
     ap1.appointmentDate = "16.7.2018-12:00";
-    ap1.employee = "Ali";
+    ap1.employee = em1;
     this.appointmentList.push(ap1);
 
     let ap2 = new Appointment();
-    ap2.customerName = "Müşteri1";
-    ap2.customerPhoneNumber = 5459999999;
+    ap2.customer = cs2;
     ap2.appointmentDate = "16.7.2018-14:00";
-    ap2.employee = "Nur";
+    ap2.employee = em2;
     this.appointmentList.push(ap2);
 
     let ap3 = new Appointment();
-    ap3.customerName = "Müşteri2";
-    ap3.customerPhoneNumber = 5440000000;
+    ap3.customer = cs3;
     ap3.appointmentDate = "16.7.2018-16:00";
-    ap3.employee = "Elif";
+    ap3.employee = em3;
     this.appointmentList.push(ap3);
+  }
 
+  getEmployeeList(): Employee[] {
+    this.arrangeLists();
+    return this.employeeList;
+  }
+
+  getAppointmentList(): Appointment[] {
+    this.arrangeLists();
     return this.appointmentList;
+  }
 
+  getCustomerList(): Customer[] {
+    this.arrangeLists();
+    return this.customerList;
   }
 }
