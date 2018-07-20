@@ -1,0 +1,52 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Products and Services</ion-title>
+      <button ion-button secondary menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-fab left bottom><button ion-button (click)="addNewProduct()" full round>New Product</button></ion-fab>
+  <ion-fab right bottom><button ion-button (click)="addNewService()"  full round>New Service</button></ion-fab>
+  <ion-content padding>
+      
+      <ion-card  *ngFor="let item of productList" full>
+        
+          <img src="http://www.buykorea.org/images/files_new/mp/gd/2017/06/16/20170616122228097_027_RE.jpg" width="100%" height="50%"/>
+          <ion-card-content>
+            <ion-card-title>
+                {{item.name}}
+              </ion-card-title>
+            <p>
+                {{item.info}}
+            </p>
+            {{item.price}}₺
+          
+          <br>
+          <button ion-button><ion-icon name="create" (click)="editProduct(this.item)"></ion-icon></button>
+          <button ion-button color='danger' (click)="removeProduct(this.item)"><ion-icon name="trash" ></ion-icon></button>
+        </ion-card-content>
+        </ion-card>
+  
+        <ion-card *ngFor="let item of serviceList" full>
+        
+            <img src="https://s3-ap-south-1.amazonaws.com/fasdeal-f/uploads/slider/orginal_1471955601viMB.jpg" width="100%" height="50%"/>
+            <ion-card-content >
+              <ion-card-title>
+                  {{item.name}}
+                </ion-card-title>
+              <p>
+                  {{item.info}}
+              </p>
+              {{item.time}} minutes <br> {{item.price}}₺
+              <br>
+              <button ion-button blue-button (click)="editService(this.item)"><ion-icon name="create"></ion-icon></button>
+              <button ion-button color='danger' (click)="removeService(this.item)"><ion-icon name="trash"></ion-icon></button>
+            
+            </ion-card-content>
+            
+            
+          </ion-card>
+  </ion-content>
+  

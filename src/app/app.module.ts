@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import {EmployeePage} from "../pages/employee/employee";
+import {ProductsAndServicesPage} from "../pages/products-and-services/products-and-services";
 import {EmployeeListUpdateComponent} from "../components/employee-list-update/employee-list-update";
 import { AppointmentPage } from '../pages/appointment/appointment';
 import { AppointmentListUpdateComponent } from '../components/appointment-list-update/appointment-list-update';
